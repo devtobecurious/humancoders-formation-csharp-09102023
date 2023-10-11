@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdA.Tests.UI.Deplacements",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdA.Tests.Combats.DeathMatch", "SdA.Tests.Combats.DeathMatch\SdA.Tests.Combats.DeathMatch.csproj", "{842A7950-8458-467F-A66B-4F2CB69E536D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Learnings", "Learnings", "{B92C965E-B876-4CDF-A700-01E3E07008B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscoverDelegate", "DiscoverDelegate\DiscoverDelegate.csproj", "{18E2214F-958E-4F8B-A3B5-560D29290851}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{842A7950-8458-467F-A66B-4F2CB69E536D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{842A7950-8458-467F-A66B-4F2CB69E536D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{842A7950-8458-467F-A66B-4F2CB69E536D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E2214F-958E-4F8B-A3B5-560D29290851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E2214F-958E-4F8B-A3B5-560D29290851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E2214F-958E-4F8B-A3B5-560D29290851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E2214F-958E-4F8B-A3B5-560D29290851}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -69,6 +77,7 @@ Global
 		{1F9F1A5A-D840-4598-BF09-ACFD95D57264} = {27C78882-2E06-4F36-B1A4-FDB17FFE3A3C}
 		{8DCA0D9B-689A-4FCA-AF49-A05CD3D94055} = {1F9F1A5A-D840-4598-BF09-ACFD95D57264}
 		{842A7950-8458-467F-A66B-4F2CB69E536D} = {1F9F1A5A-D840-4598-BF09-ACFD95D57264}
+		{18E2214F-958E-4F8B-A3B5-560D29290851} = {B92C965E-B876-4CDF-A700-01E3E07008B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {293A461D-C53F-4F14-A8CC-B6DED43635BF}

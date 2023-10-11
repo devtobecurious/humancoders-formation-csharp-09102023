@@ -234,7 +234,7 @@ Player? DetectionAgeJoueur()
             Console.ForegroundColor = ConsoleColor.White;
         }
 
-        player = new Player(dateValide);
+        player = new Player(dateValide, new(0, 0));
     }
 
     if (!ageValide)
