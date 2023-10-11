@@ -1,14 +1,14 @@
-﻿namespace SdA.Game.Libs.Models.GamePlay.Enemies;
+﻿namespace SdA.Game.Libs.Models.GamePlay.Characters.Enemies;
 
 public class Orc : Enemy
 {
-    public Orc(string name) : base(name)
+    public Orc(string name) : base(string.Empty, new(0, 0))
     {
     }
 
-    public override void SeDeplacer()
+    protected override void DoSeDeplacer()
     {
-        throw new NotImplementedException();
+
     }
 
     public override void Attaquer()

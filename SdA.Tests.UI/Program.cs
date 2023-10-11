@@ -1,5 +1,5 @@
 ﻿using SdA.Game.Libs.Models.GamePlay;
-using SdA.Game.Libs.Models.GamePlay.Enemies;
+using SdA.Game.Libs.Models.GamePlay.Characters.Enemies;
 
 List<Enemy> enemies = new()
 {

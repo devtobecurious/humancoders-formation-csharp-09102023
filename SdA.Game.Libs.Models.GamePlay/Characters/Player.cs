@@ -1,9 +1,9 @@
-﻿namespace SdA.Game.Libs.Models.GamePlay;
+﻿namespace SdA.Game.Libs.Models.GamePlay.Characters;
 
 /// <summary>
 /// Player qui va jouer et représenter un joueur d'une partie de jeu
 /// </summary>
-public class Player
+public class Player : Character
 {
     #region Fields
 
@@ -14,14 +14,14 @@ public class Player
     #endregion
 
     #region Constructors
-    public Player(DateTime date) : this(string.Empty, date)
+    public Player(DateTime date, Position2DR position) : this(string.Empty, date, position)
     {
-        this.Initialiser(date);
+        Initialiser(date);
     }
 
-    public Player(string nickName, DateTime date)
+    public Player(string nickName, DateTime date, Position2DR position) : base(position)
     {
-        this.NickName = nickName;
+        NickName = nickName;
     }
     #endregion
 
@@ -31,17 +31,22 @@ public class Player
     #region Internal methods
     private void Initialiser(DateTime dateNaissance)
     {
-        this.DateDeNaissance = dateNaissance;
+        DateDeNaissance = dateNaissance;
+    }
+
+    protected override void DoSeDeplacer()
+    {
+        throw new NotImplementedException();
     }
     #endregion
 
     #region Properties
-    public List<SessionGame> Sessions => this.gameSessions;
+    public List<SessionGame> Sessions => gameSessions;
 
     public string NickName
     {
-        get { return this.nickName; }
-        set { this.nickName = value; }
+        get { return nickName; }
+        set { nickName = value; }
     }
 
     // public DateTime DateDeNaissance { get; private set; }
@@ -54,17 +59,17 @@ public class Player
         get => dateDeNaissance;
         private set
         {
-            this.dateDeNaissance = value;
-            if (!this.AgeValide)
+            dateDeNaissance = value;
+            if (!AgeValide)
             {
                 throw new Exception("Age pas valide");
             }
         }
     }
 
-    public bool AgeValide => this.Age >= 13;
+    public bool AgeValide => Age >= 13;
 
     //public int Age { get { return (DateTime.Now - this.DateDeNaissance).Days / 365; } }
-    public int Age => (DateTime.Now - this.DateDeNaissance).Days / 365;
+    public int Age => (DateTime.Now - DateDeNaissance).Days / 365;
     #endregion
 }

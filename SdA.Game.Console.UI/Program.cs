@@ -1,4 +1,5 @@
 ﻿using SdA.Game.Libs.Models.GamePlay;
+using SdA.Game.Libs.Models.GamePlay.Characters;
 using SdA.Game.Libs.Models.UI;
 using System.Globalization;
 
