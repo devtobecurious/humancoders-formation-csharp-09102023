@@ -1,10 +1,16 @@
-﻿namespace SdA.Game.Libs.Models.GamePlay.Characters;
+﻿using SdA.Game.Libs.Models.GamePlay.Characters.Armes;
+
+namespace SdA.Game.Libs.Models.GamePlay.Characters;
 
 /// <summary>
 /// Classe parent des ennemies et du player
 /// </summary>
 public abstract class Character
 {
+    #region Fields
+    private static Random random = new Random();
+    #endregion
+
     #region Constructors
     public Character(Position2DR positionParDefaut)
     {
@@ -23,6 +29,13 @@ public abstract class Character
     #endregion
 
     #region Public methods
+    public virtual void Attaquer(Character enemy)
+    {
+        int coup = random.Next(0, this.PointsAttaque + 1);
+        coup = (int)(coup * this.ArmePrincipale.GetValeurCoup());
+        enemy.PointsDeVie = new PointsDeVie(enemy.PointsDeVie.Value - coup, enemy.PointsDeVie.Min, enemy.PointsDeVie.Max);
+    }
+
     /// <summary>
     /// Déplacement par défaut
     /// </summary>
@@ -46,5 +59,15 @@ public abstract class Character
 
     #region Properties
     public Position2DR Position { get; protected set; }
+
+    public PointsDeVie PointsDeVie { get; private set; } = new(100, 0, 100);
+
+
+    public virtual int PointsAttaque { get; protected set; } = 10;
+
+
+    public bool EstEnVie => this.PointsDeVie.Value > 0;
+
+    public Arme ArmePrincipale { get; set; } = new Arbalete();
     #endregion
 }
