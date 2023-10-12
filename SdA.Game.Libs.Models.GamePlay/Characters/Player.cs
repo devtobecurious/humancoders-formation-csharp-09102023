@@ -1,5 +1,11 @@
 ﻿namespace SdA.Game.Libs.Models.GamePlay.Characters;
 
+public class EchangeUI
+{
+    public Action<string>? AfficherInfo { get; set; }
+    public Func<string>? RecupererSaisie { get; set; }
+}
+
 /// <summary>
 /// Player qui va jouer et représenter un joueur d'une partie de jeu
 /// </summary>
@@ -11,12 +17,14 @@ public class Player : Character
     private DateTime dateDeNaissance = DateTime.MinValue;
 
     private List<SessionGame> gameSessions = new();
+    private readonly EchangeUI echangeUI;
     #endregion
 
     #region Constructors
-    public Player(DateTime date, Position2DR position) : this(string.Empty, date, position)
+    public Player(DateTime date, Position2DR position, EchangeUI echangeUI) : this(string.Empty, date, position)
     {
         Initialiser(date);
+        this.echangeUI = echangeUI;
     }
 
     public Player(string nickName, DateTime date, Position2DR position) : base(position)
@@ -36,7 +44,35 @@ public class Player : Character
 
     protected override void DoSeDeplacer()
     {
-        throw new NotImplementedException();
+        this.echangeUI?.AfficherInfo?.Invoke("Prochain déplacement ? (q: gauche, d: droite, z: haut, s: bas)");
+        string? saisie = this.echangeUI?.RecupererSaisie?.Invoke();
+
+        switch (saisie.ToLower())
+        {
+            case "q":
+                {
+                    this.Position = new(this.Position.X - 1, this.Position.Y);
+                }
+                break;
+
+            case "d":
+                {
+                    this.Position = new(this.Position.X + 1, this.Position.Y);
+                }
+                break;
+
+            case "z":
+                {
+                    this.Position = new(this.Position.X, this.Position.Y - 1);
+                }
+                break;
+
+            case "s":
+                {
+                    this.Position = new(this.Position.X, this.Position.Y + 1);
+                }
+                break;
+        }
     }
     #endregion
 
