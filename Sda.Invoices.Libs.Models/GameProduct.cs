@@ -1,14 +1,15 @@
 ﻿namespace Sda.Invoices.Libs.Models;
 
-public delegate decimal GetTva();
+// public delegate decimal GetTva();
 
 public class GameProduct
 {
-    private readonly GetTva getTva;
+    //private readonly GetTva getTva;
+    private readonly Func<decimal> getTva;
     private decimal prixHT;
     private decimal prixTTC;
 
-    public GameProduct(GetTva getTva)
+    public GameProduct(Func<decimal> getTva)
     {
         this.getTva = getTva;
     }

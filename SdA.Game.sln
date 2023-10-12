@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sell", "Sell", "{61FE7C33-E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sda.Invoices.Libs.Models", "Sda.Invoices.Libs.Models\Sda.Invoices.Libs.Models.csproj", "{F9CF4B7E-D652-4D4B-B536-9A76FF7874C0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LaVieEnEntrepriseDeDev", "LaVieEnEntrepriseDeDev\LaVieEnEntrepriseDeDev.csproj", "{01C89120-736C-4731-9E82-1457061E2B54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{F9CF4B7E-D652-4D4B-B536-9A76FF7874C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9CF4B7E-D652-4D4B-B536-9A76FF7874C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9CF4B7E-D652-4D4B-B536-9A76FF7874C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C89120-736C-4731-9E82-1457061E2B54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C89120-736C-4731-9E82-1457061E2B54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C89120-736C-4731-9E82-1457061E2B54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C89120-736C-4731-9E82-1457061E2B54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{FD286B9E-B360-436D-920A-637630D8939E} = {1F9F1A5A-D840-4598-BF09-ACFD95D57264}
 		{61FE7C33-EE6A-483A-B07A-8E3F2CB32E89} = {0489584E-33F7-4917-9420-3CCC63CBEF79}
 		{F9CF4B7E-D652-4D4B-B536-9A76FF7874C0} = {61FE7C33-EE6A-483A-B07A-8E3F2CB32E89}
+		{01C89120-736C-4731-9E82-1457061E2B54} = {B92C965E-B876-4CDF-A700-01E3E07008B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {293A461D-C53F-4F14-A8CC-B6DED43635BF}
