@@ -47,7 +47,7 @@ public class Player : Character
         this.echangeUI?.AfficherInfo?.Invoke("Prochain déplacement ? (q: gauche, d: droite, z: haut, s: bas)");
         string? saisie = this.echangeUI?.RecupererSaisie?.Invoke();
 
-        switch (saisie.ToLower())
+        switch (saisie?.ToLower())
         {
             case "q":
                 {
