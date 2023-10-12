@@ -8,7 +8,13 @@ Character player = new Player(new DateTime(1983, 10, 25), new(0, 0));
 Character enemy = new Urukhai("U");
 
 
-BaseCombat baseCombat = new DeathMatchCombat(player, enemy);
+// BaseCombat baseCombat = new DeathMatchCombat(player, enemy);
+BaseCombat baseCombat = new DeathMatchCombat(new DeathMatchSetting()
+{
+    AfficherInfo = Console.WriteLine,
+    One = player,
+    Two = enemy
+});
 var result = baseCombat.Fight();
 
 if (result != null && result.IsSuccess)
