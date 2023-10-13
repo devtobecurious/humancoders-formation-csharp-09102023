@@ -16,7 +16,7 @@ using (var context = new DefaultContext(builder.Options))
 
     var query = from elfe in context.Elfes
                 where elfe.Name.Contains("is")
-                select elfe;
+                select new { Yolo = elfe.Name.ToUpper() };
 
     var list = query.ToList(); // ici qu'on se connecte et qu'on envoie la requete sql
 
