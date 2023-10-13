@@ -15,7 +15,15 @@
         public Code EcrireCode()
         {
             this.CodeACommencer?.Invoke("Let's go");
+
             var code = this.creerCode();
+
+
+            throw new LaFlemmeException()
+            {
+                CodeCourant = code
+            };
+
             this.CodeFini?.Invoke(code, "Alors ça t'en bouche un coin de canard");
 
             return code;

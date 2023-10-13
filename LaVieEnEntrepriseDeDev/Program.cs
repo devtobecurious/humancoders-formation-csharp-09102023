@@ -18,7 +18,32 @@ dev1.CodeFini += director.ArreterCompteur;
 
 
 Developpeur dev2 = new(() => new(""));
-var code2 = dev1.EcrireCode();
+
+try
+{
+    var code2 = dev1.EcrireCode();
+}
+catch (LaFlemmeException ex) when (ex.CodeCourant != null)
+{
+    Console.WriteLine("Flute il a la flemme");
+
+    throw new Exception("", ex);
+}
+catch (LaFlemmeException ex) when (ex.CodeCourant == null)
+{
+    Console.WriteLine("Flute il a la flemme");
+
+    throw new Exception("", ex);
+}
+finally
+{
+    Console.WriteLine("Dans tous les cas");
+}
+//catch (Exception)
+//{
+
+//}
+
 
 
 dev1.CodeACommencer -= chef1.DemarrerCompteur;
